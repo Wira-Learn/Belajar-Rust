@@ -1,0 +1,22 @@
+{
+  "name": "Rust Codespace",
+  "image": "mcr.microsoft.com/devcontainers/universal:latest",
+
+  // Tambahkan Rust melalui fitur
+  "features": {
+    "ghcr.io/devcontainers/features/rust:1": {
+      "version": "latest"
+    }
+  },
+
+  // Menginstal ekstensi Rust di VS Code saat Codespaces dibuka
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "rust-lang.rust-analyzer", 
+        "tamasfe.even-better-toml",
+        "serayuzgur.crates"
+      ]
+    }
+  }
+}
