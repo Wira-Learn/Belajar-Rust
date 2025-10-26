@@ -13,44 +13,37 @@ Cara paling disarankan untuk menginstal Rust adalah menggunakan `rustup`.
     ```bash
     curl --proto '=https' --tlsv1.2 -sSf [https://sh.rustup.rs](https://sh.rustup.rs) | sh
     ```
-3.  Ikuti petunjuk instalasi *default* (pilih `1`).
+3.  Ikuti petunjuk instalasi *default*.
 4.  Aktifkan lingkungan Rust di sesi terminal saat ini:
     ```bash
     source $HOME/.cargo/env
     ```
-5.  Verifikasi instalasi:
-    ```bash
-    rustc --version
-    cargo --version
-    ```
 
-### 2. Menggunakan GitHub Codespaces (Lingkungan Otomatis)
+### 2. Menggunakan GitHub Codespaces
 
 Proyek ini telah dikonfigurasi untuk Codespaces, yang akan otomatis menyiapkan lingkungan Rust dan ekstensi VS Code yang diperlukan.
 
-Cukup buka repositori ini di Codespaces, dan semua alat akan tersedia berkat konfigurasi di `.devcontainer/devcontainer.json`.
-
 ### 3. Cara Menjalankan Kode Contoh
 
-#### A. Untuk File Tunggal (Misalnya `main.rs`)
+#### A. Kompilasi Manual (Menggunakan `rustc`)
+
+Digunakan untuk file Rust tunggal.
 
 1.  Kompilasi file kode:
     ```bash
-    rustc <nama_file>.rs
-    # Contoh: rustc hello_world/main.rs 
+    rustc hello_world/main.rs 
     ```
 2.  Jalankan *executable binary* yang dihasilkan:
     ```bash
-    ./<nama_file_tanpa_ekstensi>
-    # Contoh: ./hello_world/main 
+    ./hello_world/main 
     ```
-    (Hasil dari contoh `hello_world/main.rs` adalah: "Hello, world!")
+    (Contoh ada di `hello_world/main.rs`)
 
-#### B. Untuk Proyek dengan Cargo
+#### B. Menggunakan Cargo (Disarankan)
 
-Jika Anda menggunakan proyek yang dibuat dengan `cargo new`:
+Digunakan untuk semua proyek Rust yang lebih kompleks.
 
-1.  Masuk ke direktori proyek.
+1.  Masuk ke direktori proyek Cargo (misalnya `hello_cargo`).
 2.  Jalankan dan kompilasi kode secara instan:
     ```bash
     cargo run
@@ -59,15 +52,14 @@ Jika Anda menggunakan proyek yang dibuat dengan `cargo new`:
     ```bash
     cargo build
     ```
+    (Contoh proyek Cargo ada di `hello_cargo`)
 
 ---
 
-## 📅 Log Pembelajaran Harian (History Belajar)
+## 📅 Log Pembelajaran Harian (History Belajar Berdasarkan Commit)
 
-| Tanggal | Aktivitas Belajar | Hasil / Catatan |
-| :--- | :--- | :--- |
-| 2025-10-26 | **Setup Awal & Hello World** | Menginstal Rust dengan `rustup`. Membuat struktur folder awal. Menulis program pertama `hello_world/main.rs`. |
-| 2025-10-26 | **Konfigurasi Codespaces** | Mengatur `.devcontainer/devcontainer.json` untuk integrasi otomatis Rust di Codespaces menggunakan *feature*. Menginstal ekstensi `rust-analyzer`. |
-| **[YYYY-MM-DD]** | [Topik yang Dipelajari] | [Ringkasan singkat atau poin penting] |
-| **[YYYY-MM-DD]** | [Topik yang Dipelajari] | [Ringkasan singkat atau poin penting] |
-| **[YYYY-MM-DD]** | [Topik yang Dipelajari] | [Ringkasan singkat atau poin penting] |
+| Tanggal | Aktivitas Belajar | Folder Terkait | Hasil / Catatan |
+| :--- | :--- | :--- | :--- |
+| **2025-10-26** | **Setup Awal & Hello World Manual** | `hello_world` | Menginstal Rust dengan `rustup` dan mengkonfigurasi Codespaces. Membuat program pertama dan mengkompilasi secara manual menggunakan `rustc`. |
+| **2025-10-26** | **Mempelajari Cargo** | `hello_cargo` | Memahami peran **Cargo** sebagai *build system* dan *package manager* Rust. Membuat proyek baru dengan `cargo new`. Menjalankan kode menggunakan `cargo run`. |
+| **[YYYY-MM-DD]** | [Topik Belajar Selanjutnya, misal: Ownership & Borrowing] | [Nama folder/file] | [Catatan singkat atau hasil belajar] |
